@@ -1,6 +1,6 @@
 {
   "name": "fastcast-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Electron app for streaming peer-to-peer audio and video content",
   "main": "main.js",
   "scripts": {
