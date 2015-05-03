@@ -1,0 +1,43 @@
+{
+  "name": "fastcast-app",
+  "version": "1.0.0",
+  "description": "Electron app for streaming peer-to-peer audio and video content",
+  "main": "main.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakefb/fastcast-app.git"
+  },
+  "keywords": [
+    "electron",
+    "app",
+    "stream",
+    "video"
+  ],
+  "author": {
+    "name": "Jacob Fulton Buckle",
+    "email": "jacobafb@gmail.com",
+    "url": "https://github.com/jakefb"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakefb/fastcast-app/issues"
+  },
+  "homepage": "https://fastcast.nz",
+  "dependencies": {
+    "remote": "^0.2.6",
+    "drag-drop": "^2.1.0",
+    "prettysize": "0.0.3",
+    "typedarray-to-buffer": "^3.0.1",
+    "upload-element": "^1.0.1",
+    "videostream": "0.0.2",
+    "webtorrent": "^0.33.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.0.0",
+    "electron-prebuilt": "^0.25.1-1",
+    "standard": "^3.7.2"
+  }
+}
