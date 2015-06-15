@@ -1,6 +1,6 @@
 {
   "name": "fastcast-app",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Electron app for streaming peer-to-peer audio and video content",
   "main": "main.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "typedarray-to-buffer": "^3.0.3",
     "upload-element": "^1.0.1",
     "videostream": "1.1.1",
-    "webtorrent-hybrid": "^0.49.1"
+    "webtorrent": "^0.49.1"
   },
   "devDependencies": {
     "bootlint": "^0.12.0",
