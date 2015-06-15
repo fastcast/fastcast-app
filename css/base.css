@@ -2,15 +2,15 @@
  * Globals
  */
 
- /* Links */
- a,
- a:focus {
-   color: #6a9fb5;
- }
- a:hover {
-   color: #3d3d62;
-   text-decoration: none;
- }
+/* Links */
+a,
+a:focus {
+  color: #3d3d62;
+}
+a:hover {
+  color: #6a9fb5;
+  text-decoration: none;
+}
 
 
 /*
@@ -35,6 +35,16 @@
 /* Padding for spacing */
 .inner {
   padding: 30px;
+}
+
+/* Title bar */
+.titlebar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #3d3d62;
+}
+body:hover .titlebar {
+  opacity: 1;
 }
 
 
@@ -83,10 +93,30 @@
  * Videos
  */
 
-.videos > div {
+/* Video thumbnails */
+.videos div {
   -webkit-transition: all .3s ease-in-out;
-       -o-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
+}
+.videos .btn-primary {
+  margin-top: 10px;
+}
+.speed:not(:empty) {
+  padding: 20px;
+  margin: 10px 0;
+  background: #eee;
+}
+
+/* Custom primary button */
+.btn-primary {
+  background-color: #3d3d62;
+  border-color: #3d3d62;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #6a9fb5;
+  border-color: #6a9fb5;
 }
 
 
@@ -108,8 +138,16 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #3d3d62;
+}
+/* Footer links */
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 .container .text-muted {
   margin: 20px 0;
+  color: rgba(255,255,255,.6);
 }

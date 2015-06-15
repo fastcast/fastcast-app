@@ -2,12 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WATCH PART 2 HERE: https://vimeo.com/94747106 | PART 3: https://vimeo.com/95647770 | PART 4: https://vimeo.com/98352797 License the footage here: https://app.nimia.com/collections/3703/new-zealand-timelapse-ultimate-collection Part&hellip;">
-    <meta name="author" content="Jacob Fulton Buckle">
-
-    <title>Fastcast</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +14,8 @@
   </head>
 
   <body>
+
+    <div id="titlebar"></div>
 
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -53,6 +49,7 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="videoSize">Toggle video size</button>
           </p>
           <div class="log"></div>
+          <div class="speed"></div>
           <div class="caption">
             <h3>AWAKENING | NEW ZEALAND 4K <small>Martin Heck | Timestorm Films</small></h3>
             <p class="lead">WATCH PART 2 HERE: <a href="//vimeo.com/94747106">vimeo.com/94747106</a> | PART 3: <a href="//vimeo.com/95647770">vimeo.com/95647770</a> | PART 4: <a href="//vimeo.com/98352797">vimeo.com/98352797</a><br>
@@ -60,6 +57,14 @@ License the footage here: <a href="https://app.nimia.com/collections/3703/new-ze
 Part I/IV of a timelapse series through the always changing landscapes of New Zealand. Shot over 4 month, travelling through amazing landscapes, sleeping under the stars, hiking on mountains and exploring remote roads. Locations in this video where at Fjordland NP, Mount Cook NP and Arthurs Pass NP, Mavora Lakes and Lake Ohau.<br>
 Follow me on Twitter: <a href="https://twitter.com/martinheck" target="_blank" rel="nofollow">twitter.com/martinheck</a> and Facebook: <a href="https://www.facebook.com/TimestormFilms" target="_blank" rel="nofollow">facebook.com/TimestormFilms</a><br>
 Official Website: <a href="http://www.timestormfilms.com" target="_blank" rel="nofollow">timestormfilms.com</a></p>
+          </div>
+          <div id="download" class="hidden">
+            <div id="progress">
+              <h3>Download progress</h3>
+              <div class="progress">
+                <div id="progressBar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-3">
@@ -139,13 +144,14 @@ Official Website: <a href="http://www.timestormfilms.com" target="_blank" rel="n
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">2014 Fastcast. Powered by <a href="http://webtorrent.io">WebTorrent</a>.</p>
+        <p class="text-muted">&copy; 2015 Fastcast. Powered by <a href="http://webtorrent.io">WebTorrent</a>.</p>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../base.js"></script>
     <script>
       window.$ = window.jQuery = require('../js/jquery-1.11.2.min.js')
     </script>

@@ -12,9 +12,17 @@ a:hover {
   text-decoration: none;
 }
 
-/* Padding below the footer and lighter body text */
-body {
-  padding-bottom: 40px;
+/* Custom default button */
+.btn-default {
+  color: #3d3d62;
+  background-color: #fff;
+  border-color: #3d3d62;
+}
+.btn-default:hover,
+.btn-default:focus {
+  color: #fff;
+  background-color: #6a9fb5;
+  border-color: #6a9fb5;
 }
 
 
@@ -26,16 +34,19 @@ body {
 .cover {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
-.site-wrapper {
+.overlay {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 20;
+}
+.site-wrapper {
   display: table;
   width: 100%;
+  text-align: center;
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -49,6 +60,16 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+}
+
+/* Title bar */
+.titlebar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #3d3d62;
+}
+body:hover .titlebar {
+  opacity: 1;
 }
 
 
@@ -68,14 +89,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
@@ -100,28 +121,37 @@ body {
 
 /* Carousel base class */
 .carousel {
-  min-height: 480px;
   height: 100vh;
   max-height: 768px;
+  min-height: 480px;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  padding-bottom: 60px;
   z-index: 10;
+  padding-bottom: 60px;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  min-height: 480px;
   height: 100vh;
   max-height: 768px;
+  min-height: 480px;
   background-color: #3d3d62;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
+
+/* Remove carousel control background gradient */
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+/* Backgound images */
 .imageone {
   background-image: url('../img/imageone.jpg');
 }
@@ -131,17 +161,15 @@ body {
 .imagethree {
   background-image: url('../img/imagethree.jpg');
 }
-.carousel-control.left, .carousel-control.right {
-  background-image: none;
-}
+
+/* Down button */
 .button-down {
-	cursor: pointer;
   position: relative;
   bottom: 60px;
-  z-index: 10;
-  -webkit-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  cursor: pointer;
+  -webkit-transition: all .2s linear;
+       -o-transition: all .2s linear;
+          transition: all .2s linear;
 }
 
 
@@ -150,15 +178,15 @@ body {
  */
 
 .featured-videos {
-	padding-top: 60px;
-	margin-bottom: 20px;
-	text-align: center;
+  padding-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .featured-videos .col-lg-4 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .video-boxes {
   position: relative;
@@ -166,23 +194,23 @@ body {
   border-radius: 6px;
 }
 .description {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-	opacity: 0;
-	border-radius: 6px;
-  -webkit-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 }
 .video-boxes:hover .description {
-	color: #fff;
-	opacity: 1;
-	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-        box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  color: #fff;
+  opacity: 1;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -197,15 +225,19 @@ body {
 }
 .marketing h2 {
   font-weight: normal;
-  color: #5a5a5a;
+  color: #3d3d62;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
   color: #5a5a5a;
 }
+.marketing .img-circle {
+  width: 140px;
+  height: 140px;
+}
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 80px 0;
 }
 
 
@@ -213,44 +245,48 @@ body {
  * Footer
  */
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 20px;
-}
+/* Padding below the footer and lighter footer text */
 .footer {
-  position: absolute;
-  bottom: 0;
+  padding-bottom: 40px;
+  margin-top: 140px;
+  color: #5a5a5a;
   text-align: center;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
 }
+
 /* Footer links */
 .footer a,
 .footer a:focus {
   color: #6a9fb5;
 }
 .footer a:hover {
+  color: #6a9fb5;
   text-decoration: underline;
 }
-.container .text-muted {
-  margin: 20px 0;
-}
+
+/* Social buttons */
 .social-buttons {
-  padding: 22px 0 17px;
-  margin-top: 80px;
-  text-align: center;
-  background-color: #6a9fb5;
-}
-.social-buttons ul.list-inline {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 .github-btn {
   overflow: hidden;
-  border: 0
+  border: 0;
+}
+
+/* Logo up button */
+.logo {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  background: url(../img/fastcast.svg);
+  background-size: 100% 100%;
+  opacity: 0.6;
+  -webkit-transition: opacity .6s linear;
+       -o-transition: opacity .6s linear;
+          transition: opacity .6s linear;
+}
+.logo:hover,
+.logo:active {
+  background: url(../img/chevron-up.svg);
+  background-size: 100% 100%;
+  opacity: 1;
 }

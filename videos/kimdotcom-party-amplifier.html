@@ -2,12 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Radio DJ&#39;s - Get this song if you like it and play it for free ;) Follow me: http://twitter.com/KimDotcom Free download: http://www.kim.com Produced by Print&hellip;">
-    <meta name="author" content="Jacob Fulton Buckle">
-
-    <title>Fastcast</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +14,8 @@
   </head>
 
   <body>
+
+    <div id="titlebar"></div>
 
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -53,11 +49,20 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="videoSize">Toggle video size</button>
           </p>
           <div class="log"></div>
+          <div class="speed"></div>
           <div class="caption">
             <h3>Kim Dotcom - Party Amplifier Video <small>KimDotcom</small></h3>
             <p class="lead">Radio DJ's - Get this song if you like it and play it for free ;)<br>
 Follow me: <a href="http://twitter.com/KimDotcom">http://twitter.com/KimDotcom</a><br>
 Free download: <a href="http://www.kim.com">http://www.kim.com</a><br><br>Produced by Printz Board and Kim Dotcom<br>Thanks for helping: Sleep Deez and Texical.<br>Thanks for inspiration: Prodigy</p>
+          </div>
+          <div id="download" class="hidden">
+            <div id="progress">
+              <h3>Download progress</h3>
+              <div class="progress">
+                <div id="progressBar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-3">
@@ -137,13 +142,14 @@ Free download: <a href="http://www.kim.com">http://www.kim.com</a><br><br>Produc
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">2014 Fastcast. Powered by <a href="http://webtorrent.io">WebTorrent</a>.</p>
+        <p class="text-muted">&copy; 2015 Fastcast. Powered by <a href="http://webtorrent.io">WebTorrent</a>.</p>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../base.js"></script>
     <script>
       window.$ = window.jQuery = require('../js/jquery-1.11.2.min.js')
     </script>
