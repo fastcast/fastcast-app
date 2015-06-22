@@ -1,5 +1,5 @@
-var app = require('app');  // Module to control application life.
-var BrowserWindow = require('browser-window');  // Module to create native browser window.
+var app = require('app') // Module to control application life.
+var BrowserWindow = require('browser-window') // Module to create native browser window.
 var ipc = require('ipc')
 
 var frame = process.platform === 'win32'
@@ -7,12 +7,16 @@ var frame = process.platform === 'win32'
 // This method will be called when Electron has done everything
 // initialization and ready for creating browser windows.
 app.on('ready', function () {
+
   // Create the browser window.
   win = new BrowserWindow({
     title: 'Fastcast',
     width: 800,
     height: 600,
-    frame: frame
+    frame: frame,
+    'web-preferences': {
+      'overlay-scrollbars': true
+    }
   })
 
   // and load the index.html of the app.

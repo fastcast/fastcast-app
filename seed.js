@@ -1,7 +1,7 @@
 var dragDrop = require('drag-drop')
-var uploadElement = require('upload-element')
 var path = require('path')
 var prettyBytes = require('pretty-bytes')
+var uploadElement = require('upload-element')
 var WebTorrent = require('webtorrent')
 
 var util = require('./util')
